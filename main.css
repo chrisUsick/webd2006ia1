@@ -1,0 +1,119 @@
+body {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+/* flexbox doesn't play well with widths specified in pixels
+ content was hidden when browser went small with 
+ `justify-content: center`
+*/
+@media (max-width: 800px) {
+  body {
+  	justify-content:initial;
+  }
+}
+
+#wrapper {
+	width: 779px;
+	min-width: 779px;
+}
+
+#header {
+	border-bottom: 1px dashed grey;
+}
+
+#sidebar, #content {
+	display: inline-block;
+	margin-top: 20px;
+}
+
+#sidebar {
+	width: 125px;
+	vertical-align: text-top;
+}
+
+#content {
+	width: 650px;
+	vertical-align: text-top;
+	margin-bottom: 20px;
+}
+
+#content h2:first-child {
+	margin-top: 0px;
+}
+
+#content h2 {
+	font-family: sans-serif;
+}
+#content > p {
+	width: 100%;
+}
+
+#footer {
+	border-top: 1px dashed grey;
+}
+
+table, p, form {
+	margin-left: 20px;
+}
+
+img {
+	border: 1px solid grey;
+	padding: 10px;
+	margin: 5px;
+	width: 240px;
+	height: 160px;
+	overflow: hidden;
+	/*clip: rect(0px, 240px, 160px, 0px);*/
+}
+
+#header h1 {
+	margin-left: 20px;
+}
+
+#sidebar ul {
+	list-style-type: none;
+	padding-left: 25px;
+	margin: 0;
+}
+
+/*
+	table formatting
+ */
+tr * {
+	padding: 3px;
+}
+
+th {
+	background-color: #36C6F9;
+}
+
+tr:nth-child(even) {
+	background-color: #D8D8D8;
+}
+
+/* Form design */
+form ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0px;
+}
+
+form li {
+	margin-bottom: 20px;
+}
+
+form input[type="submit"], form input[type="reset"]{
+	display: inline;
+}
+
+form input, form label {
+	display: block;
+}
+
+input[type=text] {
+	border-style: solid;
+	border: 1px solid grey;
+	padding-left: 2px;	
+}
